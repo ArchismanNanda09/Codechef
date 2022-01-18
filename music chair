@@ -1,0 +1,43 @@
+package deccookoff;
+import java.util.*;
+public class music {
+	static boolean notPrime(int n)
+    {
+        
+        if (n <= 1)
+            return false;
+  
+        for (int i = 2; i < n; i++)
+            if (n % i == 0)
+                return false;
+  
+        return true;
+    }
+		  
+		
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-->0){
+		    int n = sc.nextInt();
+		    if(n==2){
+		        System.out.println(1);
+		    }
+		    if(n%2==0 && !notPrime(n-1)) {
+		    	System.out.println(3);
+		    }
+		    else if(n%2==0 && notPrime(n-1)) {
+		    	System.out.println(2);
+		    }
+		    else if(n>5 && n%2!=0) {
+		    	System.out.println(3);
+		    }
+		    else if(n<=4 && n%2!=0) {
+		    	System.out.println(2);
+		    }
+		   
+
+		}
+}
+}
